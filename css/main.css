@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: url("../images/bg-pattern-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .left-section {
+  position: relative;
+  width: 60%;
+  margin: 10% auto;
+  display: grid;
+}
+main .left-section .logo-img {
+  width: 35%;
+}
+main .left-section .hero-mobile-div {
+  display: none;
+}
+main .left-section .content-div {
+  margin-top: 30px;
+}
+main .left-section .content-div h1 {
+  font-size: 4rem;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+main .left-section .content-div h1 span {
+  font-weight: 300;
+  color: hsl(0deg, 36%, 70%);
+}
+main .left-section .content-div p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: hsl(0deg, 36%, 70%);
+  line-height: 1.5;
+  font-weight: 600;
+}
+main .left-section .email-div {
+  position: relative;
+  margin-top: 10%;
+  display: flex;
+}
+main .left-section .email-div input {
+  outline: none;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  width: 100%;
+  border-radius: 30px;
+  padding: 20px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  color: hsl(0deg, 36%, 70%);
+}
+main .left-section .email-div ::-moz-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+main .left-section .email-div :-ms-input-placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+main .left-section .email-div ::placeholder {
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+main .left-section .email-div #error-svg {
+  visibility: hidden;
+  position: absolute;
+  align-self: center;
+  right: 110px;
+}
+main .left-section .email-div .fa-circle-check {
+  visibility: hidden;
+  position: absolute;
+  align-self: center;
+  right: 110px;
+  color: green;
+}
+main .left-section .email-div .send {
+  display: inline;
+  position: relative;
+}
+main .left-section .email-div .arrow-div {
+  display: inline;
+  position: absolute;
+  padding: 17px 50px;
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border-radius: 40px;
+  left: -100px;
+  overflow: hidden;
+  -webkit-animation-name: send-arrow-div;
+          animation-name: send-arrow-div;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+main .left-section .email-div .arrow-div:hover {
+  cursor: pointer;
+  box-shadow: 8px 10px 29px -18px rgba(0, 0, 0, 0.75);
+}
+main .left-section .email-div .arrow {
+  position: relative;
+  -webkit-animation-name: send-arrow;
+          animation-name: send-arrow;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+main .left-section .attribution {
+  text-align: center;
+  line-height: 1.5;
+}
+main .right-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .right-section .right-img-div {
+  position: absolute;
+  height: 100%;
+}
+main .right-section img {
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+@-webkit-keyframes send-arrow {
+  0% {
+    transform: translateX(-100px) scale(2, 2);
+  }
+  100% {
+    transform: translateX(0px) scale(1, 1);
+  }
+}
+
+@keyframes send-arrow {
+  0% {
+    transform: translateX(-100px) scale(2, 2);
+  }
+  100% {
+    transform: translateX(0px) scale(1, 1);
+  }
+}
+@-webkit-keyframes send-arrow-div {
+  0% {
+    background: linear-gradient(135deg, hsl(0deg, 43%, 63%), hsl(0deg, 100%, 98%));
+  }
+  100% {
+    background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  }
+}
+@keyframes send-arrow-div {
+  0% {
+    background: linear-gradient(135deg, hsl(0deg, 43%, 63%), hsl(0deg, 100%, 98%));
+  }
+  100% {
+    background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  }
+}/*# sourceMappingURL=main.css.map */

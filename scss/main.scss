@@ -1,0 +1,172 @@
+$Primary-color-DesaturatedRed: hsl(0, 36%, 70%);
+$Primary-color-SoftRed: hsl(0, 93%, 68%);
+
+$Neutral-DarkGrayishRed: hsl(0, 6%, 24%);
+
+$Gradients-1:linear-gradient(135deg, hsl(0, 43%, 63%), hsl(0, 100%, 98%));
+$Gradients-2:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+$bg-img:url("../images/bg-pattern-desktop.svg");
+$font-family:'Josefin Sans', sans-serif;
+$font-size: 15px;
+$font-weights:(
+    "low":300,
+    "medium":400,
+    "high" : 600
+);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+main{
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: $bg-img;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .left-section{
+        // margin: 0 auto;
+        position: relative;
+        width: 60%;
+        margin: 10% auto;
+        display: grid;
+        .logo-img{
+            width: 35%;
+        }
+        .hero-mobile-div{
+            display: none;
+        }
+        .content-div{
+            margin-top: 30px;
+
+            h1{
+                font-size: 4rem;
+                letter-spacing: 15px;
+                text-transform: uppercase;
+                line-height: 1.1;
+                span{
+                    font-weight: map-get($font-weights,low);
+                    color: $Primary-color-DesaturatedRed;
+                }
+            }
+            p{
+                font-size: 16px;
+                margin-top: 20px;
+                color: $Primary-color-DesaturatedRed;
+                line-height: 1.5;
+                font-weight: map-get($font-weights, high);
+            }
+        }
+        .email-div{
+            position: relative;
+            margin-top: 10%;
+            display: flex;
+            // display: grid;
+            // grid-template-columns: 80% 20%;
+            input{
+                outline: none;
+                border: 1px solid $Primary-color-DesaturatedRed;
+                width: 100%;
+                border-radius: 30px;
+                padding: 20px 20px;
+                font-size: 16px;
+                background-color: transparent;
+                color: $Primary-color-DesaturatedRed;
+
+                
+            }
+            ::placeholder{
+                color: $Primary-color-DesaturatedRed;
+                opacity: 0.5;
+            }
+            #error-svg{
+                visibility: hidden;
+                position: absolute;
+                align-self: center;
+                right: 110px;
+            }
+            .fa-circle-check{
+                visibility: hidden;
+                position: absolute;
+                align-self: center;
+                right: 110px;
+                color: green;
+            }
+            .send{
+                display: inline;
+                position: relative;
+            }
+            .arrow-div{
+                display: inline;
+                position: absolute;
+                padding: 17px 50px;
+                background: $Gradients-2;
+                border-radius: 40px;
+                left: -100px;
+                overflow: hidden;
+                animation-name: send-arrow-div;
+                animation-duration: 3s;
+                animation-delay: 0s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-out;
+            }
+            .arrow-div:hover{
+                cursor: pointer;
+                box-shadow: 8px 10px 29px -18px rgba(0,0,0,0.75);
+            }
+            .arrow{
+                position: relative;
+                animation-name: send-arrow;
+                animation-duration: 1s;
+                animation-delay: 0s;
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-out;
+            }
+            
+        }
+        .attribution{
+            text-align: center;
+            line-height: 1.5;
+        }
+    }
+    .right-section{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .right-img-div{
+            position: absolute;
+            height: 100%;
+            
+        }
+        img{
+            right: 0;
+            bottom: 0;
+            height: 100%;
+        }
+    }
+}
+@keyframes send-arrow {
+    0%{
+        transform: translateX(-100px) scale(2,2);
+    }
+    100%{
+        transform: translateX(0px) scale(1,1);
+    }
+}
+@keyframes send-arrow-div {
+    0%{
+        background: $Gradients-1;
+    }
+    100%{
+        background: $Gradients-2;
+    }
+}
