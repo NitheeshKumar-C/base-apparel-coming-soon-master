@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution here](https://github.com/NitheeshKumar-C/base-apparel-coming-soon-master)
+- [Live Site here](https://nitheeshkumar-c.github.io/base-apparel-coming-soon-master/)
 
 ## My process
 
