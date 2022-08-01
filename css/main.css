@@ -131,6 +131,10 @@ main .left-section .email-div .arrow {
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
+main .left-section .email-div p {
+  text-align: left;
+  margin: 0 5px 20px 5px;
+}
 main .left-section .attribution {
   text-align: center;
   line-height: 1.5;

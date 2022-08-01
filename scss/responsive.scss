@@ -27,6 +27,27 @@
             width: 100%;
             padding: 3rem 3rem 0 3rem;
             margin: 0;
+            .email-div{
+                
+                input{
+                    margin: 0 auto;
+                    width: 90%;
+                    font-size: 22px;
+                }
+                .arrow-div{
+                    padding: 21px 50px;
+                    left: -130px;
+                }
+                #error-svg{
+                    right: 140px;
+                }
+                .fa-circle-check{
+                    right: 140px;
+                }
+                p{
+                    text-align: center;
+                }
+            }
             .logo-img{
                 width: 25%;
             }
